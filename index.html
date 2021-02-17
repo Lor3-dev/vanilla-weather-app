@@ -15,7 +15,116 @@
   </head>
   <body>
     <div class="container">
-      <h1>Weather App</h1>
+      <div class="weather-app row justify-content-center">
+        <div class="card mt-5 col-8">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Madrid</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Paris</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">New York</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Milan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bordeaux</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Berlin</a>
+            </li>
+          </ul>
+          <form class="row g-1 justify-content-center">
+            <div class="col-6">
+              <input
+                type="text"
+                class="form-control"
+                id="inputCity"
+                placeholder="Enter a city"
+              />
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3 px-3 ms-2">
+                Search
+              </button>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3 px-3">
+                Current
+              </button>
+            </div>
+            <div class="row">
+              <div class="col-4 p-0">
+                <ul>
+                  <li>Burgos</li>
+                  <li>Wednesday, 16:29</li>
+                  <li>Clouds</li>
+                </ul>
+              </div>
+              <div class="col-4 text-end p-0">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt=""
+                />
+              </div>
+              <div class="col-4 p-0">
+                <ul>
+                  <li>12 ºC | ºF</li>
+                  <li>Real Feel:6ºC</li>
+                  <li>Wind: 30Km/h</li>
+                </ul>
+              </div>
+            </div>
+          </form>
+          <div class="card-group">
+            <div class="card border mx-1 mb-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Tomorrow</h5>
+                <img src="" alt="" />
+                <p class="card-text text-center">11º/9º</p>
+              </div>
+            </div>
+            <div class="card border mx-1 mb-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Friday</h5>
+                <img src="" alt="" />
+                <p class="card-text text-center">11º/9º</p>
+              </div>
+            </div>
+            <div class="card border mx-1 mb-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Saturday</h5>
+                <img src="" alt="" />
+                <p class="card-text text-center">11º/9º</p>
+              </div>
+            </div>
+            <div class="card border mx-1 mb-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Sunday</h5>
+                <img src="" alt="" />
+                <p class="card-text text-center">11º/9º</p>
+              </div>
+            </div>
+            <div class="card border mx-1 mb-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Monday</h5>
+                <img src="" alt="" />
+                <p class="card-text text-center">11º/9º</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small
+        ><a
+          href="https://github.com/Lor3-dev/vanilla-weather-app"
+          target="_blank"
+          >Open-source</a
+        >by Lorena Ibeas</small
+      >
     </div>
     <script src="src/app.js"></script>
   </body>
