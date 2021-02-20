@@ -1,3 +1,70 @@
-h1 {
-  color: pink;
+.weather-app-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.weather-app {
+  max-width: 640px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid rgb(187, 184, 184);
+  border-radius: 8px;
+  background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+.list-cities {
+  font-size: 20px;
+}
+
+.main-city {
+  font-size: 40px;
+}
+.overview ul,
+.description ul {
+  list-style: none;
+}
+
+.description img {
+  height: 65px;
+  width: 65px;
+  /* position: relative;
+  left: 20px; */
+}
+
+.main-info {
+  margin-top: 20px;
+  padding-left: 50px;
+  padding-right: 56px;
+}
+
+.temp {
+  font-size: 50px;
+  line-height: 1;
+  /* position: relative;
+  left: 20px; */
+}
+.description .units {
+  position: relative;
+  bottom: 25px;
+  /* left: 20px; */
+}
+.forecast {
+  font-size: 13px;
+}
+
+.card-group img {
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+.forecast-card {
+  background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+
+.card-group {
+  padding-left: 30px;
+  padding-right: 30px;
 }
