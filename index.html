@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -67,8 +68,9 @@
             <div class="row main-info">
               <div class="col-6 p-0 overview">
                 <ul class="p-0">
-                  <li class="main-city">Burgos</li>
-                  <li>Wednesday, 16:29</li>
+                  <li class="main-city" id="city"></li>
+                  <li>Last updated: <span id="date"></span></li>
+                  <li id="description"></li>
                 </ul>
               </div>
               <div class="col-6 p-0 description text-end">
@@ -78,7 +80,7 @@
                     alt="sunny"
                   />
                   <div>
-                    <span class="temp">12</span>
+                    <span class="temp" id="temperature"></span>
                     <span class="units">
                       <a href="#">ºC</a>|<a href="#">ºF</a>
                     </span>
@@ -86,9 +88,9 @@
                 </div>
                 <div>
                   <ul class="p-0">
-                    <li>Real Feel:6ºC</li>
-                    <li>Wind: 30Km/h</li>
-                    <li>Clouds</li>
+                    <li>Real Feel: <span id="realfeel"></span>ºC</li>
+                    <li>Wind: <span id="wind"></span>Km/h</li>
+                    <li>Humidity: <span id="humidity"></span>%</li>
                   </ul>
                 </div>
               </div>

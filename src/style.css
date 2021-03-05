@@ -25,6 +25,9 @@
 .description ul {
   list-style: none;
 }
+li:first-letter {
+  text-transform: uppercase;
+}
 
 .description img {
   height: 65px;
