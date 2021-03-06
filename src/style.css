@@ -86,3 +86,7 @@ li:first-letter {
   text-decoration: none;
   color: #212529;
 }
+.card-body {
+  padding-left: 0px;
+  padding-right: 0px;
+}
