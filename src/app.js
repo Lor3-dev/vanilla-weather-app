@@ -92,6 +92,42 @@ function showCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("activation");
 }
 
+function showMadridTemperature(event) {
+  event.preventDefault();
+  let madridElement = document.querySelector(".madrid");
+  search(madridElement.innerHTML);
+}
+
+function showParisTemperature(event) {
+  event.preventDefault();
+  let parisElement = document.querySelector(".paris");
+  search(parisElement.innerHTML);
+}
+
+function showNewYorkTemperature(event) {
+  event.preventDefault();
+  let newYorkElement = document.querySelector(".new-york");
+  search(newYorkElement.innerHTML);
+}
+
+function showMilanTemperature(event) {
+  event.preventDefault();
+  let milanElement = document.querySelector(".milan");
+  search(milanElement.innerHTML);
+}
+
+function showBordeauxTemperature(event) {
+  event.preventDefault();
+  let bordeauxElement = document.querySelector(".bordeaux");
+  search(bordeauxElement.innerHTML);
+}
+
+function showBerlinTemperature(event) {
+  event.preventDefault();
+  let berlinElement = document.querySelector(".berlin");
+  search(berlinElement.innerHTML);
+}
+
 let celsius = null;
 search("Burgos");
 let currentButton = document.querySelector("#current-button");
@@ -102,3 +138,21 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let madridTemperature = document.querySelector(".madrid");
+madridTemperature.addEventListener("click", showMadridTemperature);
+
+let parisTemperature = document.querySelector(".paris");
+parisTemperature.addEventListener("click", showParisTemperature);
+
+let newYorkTemperature = document.querySelector(".new-york");
+newYorkTemperature.addEventListener("click", showNewYorkTemperature);
+
+let milanTemperature = document.querySelector(".milan");
+milanTemperature.addEventListener("click", showMilanTemperature);
+
+let bordeauxTemperature = document.querySelector(".bordeaux");
+bordeauxTemperature.addEventListener("click", showBordeauxTemperature);
+
+let berlinTemperature = document.querySelector(".berlin");
+berlinTemperature.addEventListener("click", showBerlinTemperature);
