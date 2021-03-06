@@ -71,3 +71,18 @@ li:first-letter {
   padding-left: 30px;
   padding-right: 30px;
 }
+
+#fahrenheit-link,
+#celsius-link {
+  text-decoration: none;
+}
+
+.activation {
+  color: #212529;
+  cursor: default;
+}
+
+.activation:hover {
+  text-decoration: none;
+  color: #212529;
+}
