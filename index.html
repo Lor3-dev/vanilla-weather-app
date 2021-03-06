@@ -47,7 +47,7 @@
             </li>
           </ul>
           <form class="row g-1 justify-content-center" id="search-form">
-            <div class="col-7">
+            <div class="col-6">
               <input
                 type="search"
                 class="form-control"
@@ -57,14 +57,12 @@
               />
             </div>
             <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-2 px-2 ms-1">
-                Search
-              </button>
+              <button type="submit" class="btn btn-primary mb-2">Search</button>
             </div>
             <div class="col-auto">
               <button
                 type="submit"
-                class="btn btn-primary mb-2 px-2"
+                class="btn btn-primary mb-2"
                 id="current-button"
               >
                 Current
@@ -74,16 +72,16 @@
               class="row main-info"
               style="padding-right: 34px; padding-left: 30px"
             >
-              <div class="col-6 p-0 overview">
+              <div class="col-4 p-0 overview">
                 <ul class="p-0">
                   <li class="main-city" id="city"></li>
                   <li>Last updated: <span id="date"></span></li>
                   <li id="description"></li>
                 </ul>
               </div>
-              <div class="col-6 p-0 description text-end">
+
+              <div class="col-4 p-0 description text-end">
                 <div class="">
-                  <img src="" alt="" id="icon" />
                   <div>
                     <span class="temp" id="temperature"></span>
                     <span class="units">
@@ -102,6 +100,9 @@
                     <li>Humidity: <span id="humidity"></span>%</li>
                   </ul>
                 </div>
+              </div>
+              <div class="col-4 p-0 overview">
+                <img src="" alt="" id="icon" />
               </div>
             </div>
           </form>

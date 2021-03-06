@@ -90,3 +90,11 @@ li:first-letter {
   padding-left: 0px;
   padding-right: 0px;
 }
+#icon1,
+#icon2,
+#icon3,
+#icon4,
+#icon5 {
+  height: 80px;
+  width: 80px;
+}

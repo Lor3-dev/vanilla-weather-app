@@ -86,29 +86,48 @@ if (currentDate.getDay() === 2) {
     }
   }
 }
-
+let maxTemperature1 = null;
+let minTemperature1 = null;
+let maxTemperature2 = null;
+let minTemperature2 = null;
+let maxTemperature3 = null;
+let minTemperature3 = null;
+let maxTemperature4 = null;
+let minTemperature4 = null;
+let maxTemperature5 = null;
+let minTemperature5 = null;
 function showForecast(response) {
   console.log(response.data);
   let maxTemp1 = document.querySelector(".max-temp1");
-  maxTemp1.innerHTML = Math.round(response.data.daily[1].temp.max);
   let minTemp1 = document.querySelector(".min-temp1");
-  minTemp1.innerHTML = Math.round(response.data.daily[1].temp.min);
   let maxTemp2 = document.querySelector(".max-temp2");
-  maxTemp2.innerHTML = Math.round(response.data.daily[2].temp.max);
   let minTemp2 = document.querySelector(".min-temp2");
-  minTemp2.innerHTML = Math.round(response.data.daily[2].temp.min);
   let maxTemp3 = document.querySelector(".max-temp3");
-  maxTemp3.innerHTML = Math.round(response.data.daily[3].temp.max);
   let minTemp3 = document.querySelector(".min-temp3");
-  minTemp3.innerHTML = Math.round(response.data.daily[3].temp.min);
   let maxTemp4 = document.querySelector(".max-temp4");
-  maxTemp4.innerHTML = Math.round(response.data.daily[4].temp.max);
   let minTemp4 = document.querySelector(".min-temp4");
-  minTemp4.innerHTML = Math.round(response.data.daily[4].temp.min);
   let maxTemp5 = document.querySelector(".max-temp5");
-  maxTemp5.innerHTML = Math.round(response.data.daily[5].temp.max);
   let minTemp5 = document.querySelector(".min-temp5");
-  minTemp5.innerHTML = Math.round(response.data.daily[5].temp.min);
+  maxTemperature1 = Math.round(response.data.daily[1].temp.max);
+  minTemperature1 = Math.round(response.data.daily[1].temp.min);
+  maxTemperature2 = Math.round(response.data.daily[2].temp.max);
+  minTemperature2 = Math.round(response.data.daily[2].temp.min);
+  maxTemperature3 = Math.round(response.data.daily[3].temp.max);
+  minTemperature3 = Math.round(response.data.daily[3].temp.min);
+  maxTemperature4 = Math.round(response.data.daily[4].temp.max);
+  minTemperature4 = Math.round(response.data.daily[4].temp.min);
+  maxTemperature5 = Math.round(response.data.daily[5].temp.max);
+  minTemperature5 = Math.round(response.data.daily[5].temp.min);
+  maxTemp1.innerHTML = maxTemperature1;
+  minTemp1.innerHTML = minTemperature1;
+  maxTemp2.innerHTML = maxTemperature2;
+  minTemp2.innerHTML = minTemperature2;
+  maxTemp3.innerHTML = maxTemperature3;
+  minTemp3.innerHTML = minTemperature3;
+  maxTemp4.innerHTML = maxTemperature4;
+  minTemp4.innerHTML = minTemperature4;
+  maxTemp5.innerHTML = maxTemperature5;
+  minTemp5.innerHTML = minTemperature5;
   let iconElement1 = document.querySelector("#icon1");
   iconElement1.setAttribute(
     "src",
@@ -199,6 +218,36 @@ function showFahrenheitTemperature(event) {
   let fahrenheitTemperature = (celsius * 9) / 5 + 32;
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(fahrenheitTemperature);
+  let fahrenheitTemperatureMax1 = (maxTemperature1 * 9) / 5 + 32;
+  let fahrenheitTemperatureMin1 = (minTemperature1 * 9) / 5 + 32;
+  let fahrenheitTemperatureMax2 = (maxTemperature2 * 9) / 5 + 32;
+  let fahrenheitTemperatureMin2 = (minTemperature2 * 9) / 5 + 32;
+  let fahrenheitTemperatureMax3 = (maxTemperature3 * 9) / 5 + 32;
+  let fahrenheitTemperatureMin3 = (minTemperature3 * 9) / 5 + 32;
+  let fahrenheitTemperatureMax4 = (maxTemperature4 * 9) / 5 + 32;
+  let fahrenheitTemperatureMin4 = (minTemperature4 * 9) / 5 + 32;
+  let fahrenheitTemperatureMax5 = (maxTemperature5 * 9) / 5 + 32;
+  let fahrenheitTemperatureMin5 = (minTemperature5 * 9) / 5 + 32;
+  let maxTemp1 = document.querySelector(".max-temp1");
+  let minTemp1 = document.querySelector(".min-temp1");
+  let maxTemp2 = document.querySelector(".max-temp2");
+  let minTemp2 = document.querySelector(".min-temp2");
+  let maxTemp3 = document.querySelector(".max-temp3");
+  let minTemp3 = document.querySelector(".min-temp3");
+  let maxTemp4 = document.querySelector(".max-temp4");
+  let minTemp4 = document.querySelector(".min-temp4");
+  let maxTemp5 = document.querySelector(".max-temp5");
+  let minTemp5 = document.querySelector(".min-temp5");
+  maxTemp1.innerHTML = Math.round(fahrenheitTemperatureMax1);
+  minTemp1.innerHTML = Math.round(fahrenheitTemperatureMin1);
+  maxTemp2.innerHTML = Math.round(fahrenheitTemperatureMax2);
+  minTemp2.innerHTML = Math.round(fahrenheitTemperatureMin2);
+  maxTemp3.innerHTML = Math.round(fahrenheitTemperatureMax3);
+  minTemp3.innerHTML = Math.round(fahrenheitTemperatureMin3);
+  maxTemp4.innerHTML = Math.round(fahrenheitTemperatureMax4);
+  minTemp4.innerHTML = Math.round(fahrenheitTemperatureMin4);
+  maxTemp5.innerHTML = Math.round(fahrenheitTemperatureMax5);
+  minTemp5.innerHTML = Math.round(fahrenheitTemperatureMin5);
   celsiusLink.classList.remove("activation");
   fahrenheitLink.classList.add("activation");
 }
@@ -207,6 +256,26 @@ function showCelsiusTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = celsius;
+  let maxTemp1 = document.querySelector(".max-temp1");
+  let minTemp1 = document.querySelector(".min-temp1");
+  let maxTemp2 = document.querySelector(".max-temp2");
+  let minTemp2 = document.querySelector(".min-temp2");
+  let maxTemp3 = document.querySelector(".max-temp3");
+  let minTemp3 = document.querySelector(".min-temp3");
+  let maxTemp4 = document.querySelector(".max-temp4");
+  let minTemp4 = document.querySelector(".min-temp4");
+  let maxTemp5 = document.querySelector(".max-temp5");
+  let minTemp5 = document.querySelector(".min-temp5");
+  maxTemp1.innerHTML = maxTemperature1;
+  minTemp1.innerHTML = minTemperature1;
+  maxTemp2.innerHTML = maxTemperature2;
+  minTemp2.innerHTML = minTemperature2;
+  maxTemp3.innerHTML = maxTemperature3;
+  minTemp3.innerHTML = minTemperature3;
+  maxTemp4.innerHTML = maxTemperature4;
+  minTemp4.innerHTML = minTemperature4;
+  maxTemp5.innerHTML = maxTemperature5;
+  minTemp5.innerHTML = minTemperature5;
   celsiusLink.classList.add("activation");
   fahrenheitLink.classList.remove("activation");
 }
