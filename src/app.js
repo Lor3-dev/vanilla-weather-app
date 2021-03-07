@@ -218,6 +218,7 @@ function showFahrenheitTemperature(event) {
   let fahrenheitTemperature = (celsius * 9) / 5 + 32;
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(fahrenheitTemperature);
+
   //   let fahrenheitTemperatureMax1 = (maxTemperature1 * 9) / 5 + 32;
   //   let fahrenheitTemperatureMin1 = (minTemperature1 * 9) / 5 + 32;
   //   let fahrenheitTemperatureMax2 = (maxTemperature2 * 9) / 5 + 32;
@@ -248,6 +249,19 @@ function showFahrenheitTemperature(event) {
   //   minTemp4.innerHTML = Math.round(fahrenheitTemperatureMin4);
   //   maxTemp5.innerHTML = Math.round(fahrenheitTemperatureMax5);
   //   minTemp5.innerHTML = Math.round(fahrenheitTemperatureMin5);
+
+  let forecastMax = document.querySelectorAll(".max-temp");
+  forecastMax.forEach(function (i) {
+    let currentTemp = i.innerHTML;
+    i.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
+  let forecastMin = document.querySelectorAll(".min-temp");
+  forecastMin.forEach(function (i) {
+    let currentTemp = i.innerHTML;
+    i.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
   celsiusLink.classList.remove("activation");
   fahrenheitLink.classList.add("activation");
 }
@@ -256,6 +270,18 @@ function showCelsiusTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = celsius;
+
+  let forecastMax = document.querySelectorAll(".max-temp");
+  forecastMax.forEach(function (i) {
+    let currentTemp = i.innerHTML;
+    i.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
+
+  let forecastMin = document.querySelectorAll(".min-temp");
+  forecastMin.forEach(function (i) {
+    let currentTemp = i.innerHTML;
+    i.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
   //   let maxTemp1 = document.querySelector(".max-temp1");
   //   let minTemp1 = document.querySelector(".min-temp1");
   //   let maxTemp2 = document.querySelector(".max-temp2");
@@ -276,6 +302,7 @@ function showCelsiusTemperature(event) {
   //   minTemp4.innerHTML = minTemperature4;
   //   maxTemp5.innerHTML = maxTemperature5;
   //   minTemp5.innerHTML = minTemperature5;
+
   celsiusLink.classList.add("activation");
   fahrenheitLink.classList.remove("activation");
 }
@@ -302,6 +329,7 @@ function showForecast(response) {
 
   for (let i = 0; i < 5; i++) {
     let forecast = response.data.daily[i];
+
     forecastElement.innerHTML += `<div class="card border mx-1 mb-2 forecast-card">
               <div class="card-body">
                 <h5 class="card-title text-center forecast">${formatDay(
