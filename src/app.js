@@ -261,7 +261,8 @@ function showFahrenheitTemperature(event) {
     let currentTemp = i.innerHTML;
     i.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
   });
-
+  celsiusLink.addEventListener("click", showCelsiusTemperature);
+  fahrenheitLink.removeEventListener("click", showFahrenheitTemperature);
   celsiusLink.classList.remove("activation");
   fahrenheitLink.classList.add("activation");
 }
@@ -302,7 +303,8 @@ function showCelsiusTemperature(event) {
   //   minTemp4.innerHTML = minTemperature4;
   //   maxTemp5.innerHTML = maxTemperature5;
   //   minTemp5.innerHTML = minTemperature5;
-
+  celsiusLink.removeEventListener("click", showCelsiusTemperature);
+  fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
   celsiusLink.classList.add("activation");
   fahrenheitLink.classList.remove("activation");
 }
@@ -339,10 +341,10 @@ function showForecast(response) {
                   forecast.weather[0].icon
                 }@2x.png" alt="${forecast.weather[0].description}" id="icon1" />
                 <p class="card-text text-center">
-                  <span class="max-temp1"><strong>${Math.round(
+                  <span class="max-temp">${Math.round(
                     forecast.temp.max
-                  )}</strong></span>º/<span
-                    class="min-temp1"
+                  )}</span>º/<span
+                    class="min-temp"
                   >${Math.round(forecast.temp.min)}</span
                   >º
                 </p>
